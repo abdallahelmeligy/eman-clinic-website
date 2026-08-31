@@ -2,6 +2,9 @@
   --purple:#662D91; --purple-2:#7D45A6; --purple-deep:#3B1A55; --lilac:#B58AD1;
   --gold:#C2A35C; --gold-2:#D1B46F; --gold-soft:#EDDFB3;
   --grey:#D9DDE6; --paper:#F4F5F8; --white:#fff; --ink:#1A1A1A;
+  /* كان معرَّفًا في كتلة الوضع الليلي وحدها، فكان غير معرَّف في الوضع الفاتح
+     وكل background:var(--purple-mist) يسقط إلى شفاف — إصلاح عطل لا تحسين */
+  --purple-mist:#F1ECF6;
   --ease:cubic-bezier(.22,.61,.36,1);
   --pad:clamp(16px,4.5vw,56px);
   --maxw:1240px;
@@ -1350,7 +1353,7 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
    كارت الطبيبة فاتح، فالنص الأبيض عليه تباينه 1.05 = غير مرئي.
    نفس معالجة #branches .btn--out المعتمدة: بنفسجي على الفاتح. */
 .dpg__cta .btn--out{color:var(--purple);border-color:rgba(102,45,145,.35)}
-.dpg__cta .btn--out:hover{background:var(--purple-mist,rgba(102,45,145,.08));border-color:var(--purple)}
+.dpg__cta .btn--out:hover{background:var(--purple-mist);border-color:var(--purple)}
 
 /* إيقاع الصفحة الداخلية: البطاقة والفوتر كانا متباعدين أكثر من اللازم.
    ‏.sec العام يعطي حتى 104px أسفل — نقلّصها هنا فقط ونترك للفوتر مسافة
@@ -1400,7 +1403,7 @@ html:not(.js) .shead h2>span.mask{transform:none}
 /* شرائح الاستخدامات — كتل حقيقية بخلفية وحواف ومسافة داخلية، لا نص سائب */
 .dvg__uses{list-style:none;margin:18px 0 0;padding:0;
   display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
-.dvg__uses li{font-size:.78rem;line-height:1.5;color:var(--purple);background:var(--purple-mist,rgba(102,45,145,.08));
+.dvg__uses li{font-size:.78rem;line-height:1.5;color:var(--purple);background:var(--purple-mist);
   padding:8px 14px;border:1px solid rgba(102,45,145,.12);
   border-start-start-radius:12px;border-end-end-radius:12px}
 /* فقرات الشرح تبدأ من جهة البداية بعرض قراءة محدود — النص العربي الطويل
