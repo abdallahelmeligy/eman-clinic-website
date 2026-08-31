@@ -1301,14 +1301,18 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
    حتى تبدو الصفحة مطابقة للنافذة. لا لون جديد ولا خط جديد ولا توكن جديد.
    ================================================================ */
 .inner main{padding-block-start:clamp(84px,13vw,112px)}
-.crumb{font-size:.8rem;color:#6b6b76}
-.crumb a{color:var(--purple)}
-.crumb span{margin-inline:8px;color:var(--gold)}
+/* شريط المسار — عنصر ثانوي، لا يزاحم اسم الطبيبة */
+.crumb{font-size:.82rem;color:#6b6b76;margin-block-end:clamp(18px,3vw,28px)}
+.crumb a{color:var(--purple);text-decoration:none;
+  border-block-end:1px solid transparent;transition:border-color .25s var(--ease)}
+.crumb a:hover{border-block-end-color:var(--gold)}
+.crumb__sep{margin-inline:9px;color:var(--gold);font-weight:700}
+.crumb__now{color:var(--ink);font-weight:600}
 
 .dpg{display:grid;gap:clamp(18px,3vw,30px);justify-items:center;
   max-width:min(720px,100%);margin-inline:auto;
   background:linear-gradient(178deg,#FBF8FC 0%,#F4EDF8 100%);
-  padding:clamp(26px,5vw,42px) clamp(18px,4vw,38px) clamp(28px,5vw,44px);
+  padding:clamp(26px,5vw,42px) clamp(18px,4vw,38px) clamp(20px,3.4vw,30px);
   border-start-start-radius:var(--rad-lg,26px);border-end-end-radius:var(--rad-lg,26px);
   border-start-end-radius:var(--rad-sm,5px);border-end-start-radius:var(--rad-sm,5px)}
 .dpg__media img{width:clamp(150px,42vw,196px);height:clamp(150px,42vw,196px);
@@ -1327,15 +1331,32 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
 .dpg__bio ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
 .dpg__bio h2{font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.16em;
   color:var(--purple);margin:0 0 12px}
-.dpg__bio li{display:flex;gap:10px;font-size:.88rem;line-height:1.85;color:#4a4a52}
-.dpg__bio li::before{content:"";width:6px;height:6px;flex:none;margin-block-start:10px;
+/* النقطة الذهبية بالتموضع المطلق لا بـflex: في حاوية flex يصير كل <span>
+   داخل السطر عنصرًا مستقلًا فينكسر تدفّق النص إلى أعمدة. المظهر نفسه تمامًا
+   (نقطة 6px على بعد 10px من النص) لكن النص يبقى تدفّقًا نصيًا عاديًا. */
+.dpg__bio li{position:relative;padding-inline-start:16px;
+  font-size:.88rem;line-height:1.85;color:#4a4a52}
+/* أول سطر = سنوات الخبرة: نقطة ارتكاز للعين بدل سبعة أسطر متساوية */
+.dpg__bio li:first-child{font-weight:600;color:#2E2E37}
+.dpg__bio li::before{content:"";position:absolute;inset-inline-start:0;inset-block-start:10px;
+  width:6px;height:6px;
   background:var(--gold);border-start-start-radius:5px;border-end-end-radius:5px}
+/* النص اللاتيني داخل جملة عربية — unicode-bidi:isolate يعزل اتجاهه عن الجملة
+   فلا ينقلب ترتيبه، ويظل قابلًا للالتفاف عبر الأسطر (بعكس inline-block
+   الذي يجبر العبارة على البقاء كتلة واحدة فيكسر التخطيط على الشاشات الضيقة). */
+.dpg__bio .ltr{unicode-bidi:isolate;font-family:var(--font-latin)}
 .dpg__cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-block-start:24px}
 /* ‏.btn--out الأساسي أبيض لأنه مصمَّم للخلفيات الغامقة (الدروار والفوتر والهيرو).
    كارت الطبيبة فاتح، فالنص الأبيض عليه تباينه 1.05 = غير مرئي.
    نفس معالجة #branches .btn--out المعتمدة: بنفسجي على الفاتح. */
 .dpg__cta .btn--out{color:var(--purple);border-color:rgba(102,45,145,.35)}
 .dpg__cta .btn--out:hover{background:var(--purple-mist);border-color:var(--purple)}
+
+/* إيقاع الصفحة الداخلية: البطاقة والفوتر كانا متباعدين أكثر من اللازم.
+   ‏.sec العام يعطي حتى 104px أسفل — نقلّصها هنا فقط ونترك للفوتر مسافة
+   مقصودة يتنفّس بها، فتبقى الصفحة متماسكة بدل مفكّكة. */
+.inner main .sec{padding-block-end:clamp(26px,4.4vw,48px)}
+.inner footer{margin-block-start:clamp(20px,3.4vw,34px)}
 
 html[data-theme="dark"] .dpg{background:linear-gradient(178deg,#221936,#1A1227)}
 html[data-theme="dark"] .dpg__b h1{color:#D9BFF2}
@@ -1344,6 +1365,8 @@ html[data-theme="dark"] .dpg__bio{background:rgba(255,255,255,.05);border-color:
 html[data-theme="dark"] .dpg__bio li{color:#C9C0D8}
 html[data-theme="dark"] .crumb{color:#C9C0D8}
 html[data-theme="dark"] .crumb a{color:#D9BFF2}
+html[data-theme="dark"] .crumb__now{color:var(--ink)}
+html[data-theme="dark"] .dpg__bio li:first-child{color:#F2EDF8}
 
 /* ================================================================
    حارس: لو الجافاسكربت معطّل أو فشل تحميله، لا تُخفِ المحتوى.
