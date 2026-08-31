@@ -613,7 +613,7 @@ footer .wrap{position:relative;z-index:2}
 
 .copy{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center;
   margin-block-start:0;padding-block-start:20px;border-block-start:1px solid rgba(255,255,255,.1);
-  font-size:.74rem;color:rgba(255,255,255,.42);text-align:start}
+  font-size:.74rem;color:rgba(255,255,255,.58);text-align:start}
 .copy::before{display:none}
 
 /* ================================================================
@@ -673,6 +673,7 @@ footer .wrap{position:relative;z-index:2}
 .modal__uses{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:7px}
 .modal__uses li{font-size:.76rem;color:var(--purple);background:var(--purple-mist);padding:6px 11px;
   border-start-start-radius:12px;border-end-end-radius:12px}
+html[data-theme="dark"] .modal__uses li{color:#D9BFF2}
 .modal__cta{display:flex;gap:9px;flex-wrap:wrap;margin-block-start:22px}
 .modal__cta .btn{font-size:.86rem;padding:12px 20px}
 .modal__cta .btn[hidden]{display:none}
@@ -1305,7 +1306,7 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
    ================================================================ */
 .inner main{padding-block-start:clamp(84px,13vw,112px)}
 /* شريط المسار — عنصر ثانوي، لا يزاحم اسم الطبيبة */
-.crumb{font-size:.82rem;color:#6b6b76;margin-block-end:clamp(18px,3vw,28px)}
+.crumb{font-size:.82rem;color:#5C5C66;margin-block-end:clamp(18px,3vw,28px)}
 .crumb a{color:var(--purple);text-decoration:none;
   border-block-end:1px solid transparent;transition:border-color .25s var(--ease)}
 .crumb a:hover{border-block-end-color:var(--gold)}
@@ -1323,13 +1324,13 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
   border:3px solid var(--purple);background:linear-gradient(168deg,#EFE6F8,#F6EFE0);
   box-shadow:0 20px 44px -22px rgba(59,26,85,.55);display:block}
 .dpg__b{text-align:center;width:100%}
-.dpg__k{color:var(--gold-ink);letter-spacing:.18em;font-family:var(--font-body);
+.dpg__k{color:#7A611F;letter-spacing:.18em;font-family:var(--font-body);
   font-size:.7rem;font-weight:600;display:block;margin-block-end:8px}
 .dpg__b h1{font-size:clamp(1.5rem,6vw,2.1rem);color:var(--purple)}
 .dpg__b h1::before{content:"|";color:var(--gold);margin-inline-end:10px;font-weight:300}
 .dpg__spec{color:#6b5a3a;font-size:.92rem;margin-block-start:6px}
 .dpg__bio{margin:22px 0 0;padding:20px 18px;text-align:start;
-  background:rgba(255,255,255,.75);border:1px solid rgba(102,45,145,.12);
+  background:rgba(255,255,255,.75);border:1px solid rgba(102,45,145,.58);
   border-start-start-radius:22px;border-end-end-radius:22px}
 .dpg__bio ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
 .dpg__bio h2{font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.16em;
@@ -1352,7 +1353,7 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
 /* ‏.btn--out الأساسي أبيض لأنه مصمَّم للخلفيات الغامقة (الدروار والفوتر والهيرو).
    كارت الطبيبة فاتح، فالنص الأبيض عليه تباينه 1.05 = غير مرئي.
    نفس معالجة #branches .btn--out المعتمدة: بنفسجي على الفاتح. */
-.dpg__cta .btn--out{color:var(--purple);border-color:rgba(102,45,145,.35)}
+.dpg__cta .btn--out{color:var(--purple);border-color:rgba(102,45,145,.62)}
 .dpg__cta .btn--out:hover{background:var(--purple-mist);border-color:var(--purple)}
 
 /* إيقاع الصفحة الداخلية: البطاقة والفوتر كانا متباعدين أكثر من اللازم.
@@ -1398,13 +1399,13 @@ html:not(.js) .shead h2>span.mask{transform:none}
   border-start-start-radius:22px;border-end-end-radius:22px}
 .dpg--dev .dpg__b h1::before{content:none}
 .dpg__en{display:block;font-family:var(--font-latin);font-size:.68rem;letter-spacing:.22em;
-  color:var(--gold-ink);margin-block-start:6px}
+  color:#7A611F;margin-block-start:6px}
 
 /* شرائح الاستخدامات — كتل حقيقية بخلفية وحواف ومسافة داخلية، لا نص سائب */
 .dvg__uses{list-style:none;margin:18px 0 0;padding:0;
   display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
 .dvg__uses li{font-size:.78rem;line-height:1.5;color:var(--purple);background:var(--purple-mist);
-  padding:8px 14px;border:1px solid rgba(102,45,145,.12);
+  padding:8px 14px;border:1px solid rgba(102,45,145,.58);
   border-start-start-radius:12px;border-end-end-radius:12px}
 /* فقرات الشرح تبدأ من جهة البداية بعرض قراءة محدود — النص العربي الطويل
    المتمركز يكسر خط بداية القراءة في كل سطر ويُتعب العين */
@@ -1416,7 +1417,7 @@ html:not(.js) .shead h2>span.mask{transform:none}
 /* auto-fit لا auto-fill: الصورة الفردية في آخر صف تتمدّد بدل ترك خانة فارغة */
 .dvg__gal{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
 .dvg__gal figure{margin:0;background:var(--paper);overflow:hidden;
-  border:1px solid rgba(102,45,145,.1);
+  border:1px solid rgba(102,45,145,.58);
   border-start-start-radius:18px;border-end-end-radius:18px}
 /* صور المعرض مربّعة (840×840) وكل صورة زوج قبل/بعد كامل — تُعرض بنسبتها
    الطبيعية بلا قص، بعكس النافذة التي تقصّها إلى 4:3 لضيق مساحتها */
@@ -1440,3 +1441,18 @@ html[data-theme="dark"] .dvg__gal figure{background:rgba(255,255,255,.05);border
 html[data-theme="dark"] .dvg__gal figcaption{color:#B9B0CA}
 html[data-theme="dark"] .dvg__gh{border-block-end-color:rgba(255,255,255,.14)}
 html[data-theme="dark"] .dpg__en{color:#DFC98F}
+
+/* ================================================================
+   إصلاحات تباين — مراجعة الوضعين على صفحات الطبيبات والأجهزة
+   كل الألوان من الهوية، والتعديل شفافية أو درجة فقط.
+   ================================================================ */
+/* الشرائح: النص كان بنفسجي --purple على خلفية --purple-mist الغامقة
+   في الوضع الليلي = 1.82:1، غير مقروء إطلاقًا */
+html[data-theme="dark"] .dvg__uses li{color:#D9BFF2;border-color:rgba(217,191,242,.46)}
+/* الكيكر: كان var(--gold-ink) الذي ينقلب فاتحًا في الليلي. بعد تغميقه
+   للوضع الفاتح لزمته نسخة ليلية صريحة، وإلا صار ذهبيًا غامقًا على غامق */
+html[data-theme="dark"] .dpg__k{color:#DFC98F}
+/* الحدود في الوضع الليلي: رفعها من رمادي شبه معدوم إلى حدّ مرئي */
+html[data-theme="dark"] .dpg__bio,
+html[data-theme="dark"] .dvg__gal figure{border-color:rgba(217,191,242,.46)}
+html[data-theme="dark"] .dpg__cta .btn--out{border-color:rgba(217,191,242,.62)}
