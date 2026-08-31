@@ -17,35 +17,41 @@
     ['Ashwag Ali','دكتورة إيمان عبد العزيز ممتازة جداً.']
   ];
   var rr = document.getElementById('railRev'), out = '';
-  for (var j = 0; j < revs.length; j++){
+  if (rr) for (var j = 0; j < revs.length; j++){
     out += '<article class="rev"><div class="rev__av2">'+revs[j][0].trim().charAt(0)+'</div>'+
            '<div class="rev__s">&#9733;&#9733;&#9733;&#9733;&#9733;</div>'+
            '<p class="rev__t">'+revs[j][1]+'</p>'+
            '<div class="rev__w"><div class="rev__av">'+revs[j][0].trim().charAt(0)+'</div>'+
            '<div><div class="rev__n">'+revs[j][0]+'</div><div class="rev__g">Google Maps</div></div></div></article>';
   }
-  rr.innerHTML = out;
+  if (rr) rr.innerHTML = out;
 
   /* ---------- drawer ---------- */
   var drawer = document.getElementById('drawer'), burger = document.getElementById('burger');
   function toggle(open){
+    if (!drawer) return;
     drawer.classList.toggle('open', open);
-    burger.setAttribute('aria-expanded', open);
+    if (burger) burger.setAttribute('aria-expanded', open);
     document.body.classList.toggle('lock', open);
   }
-  burger.addEventListener('click', function(){ toggle(true); });
-  document.getElementById('drawerX').addEventListener('click', function(){ toggle(false); });
-  Array.prototype.forEach.call(drawer.querySelectorAll('a'), function(a){
+  if (burger) burger.addEventListener('click', function(){ toggle(true); });
+  var drawerX = document.getElementById('drawerX');
+  if (drawerX) drawerX.addEventListener('click', function(){ toggle(false); });
+  if (drawer) Array.prototype.forEach.call(drawer.querySelectorAll('a'), function(a){
     a.addEventListener('click', function(){ toggle(false); });
   });
   addEventListener('keydown', function(e){ if (e.key === 'Escape') toggle(false); });
 
   /* ---------- header ---------- */
   var hdr = document.getElementById('hdr'), last = 0;
-  addEventListener('scroll', function(){
+  /* الصفحات الداخلية خلفيتها فاتحة ولا هيرو فيها، فالهيدر يبقى صلبًا دائمًا
+     وإلا اختفت الروابط البيضاء فوق الخلفية الفاتحة. تُفعَّل بـ<body class="inner"> */
+  var solidAlways = document.body.classList.contains('inner');
+  if (hdr && solidAlways) hdr.classList.add('solid');
+  if (hdr) addEventListener('scroll', function(){
     var y = scrollY;
-    hdr.classList.toggle('solid', y > 60);
-    hdr.classList.toggle('hide', y > last && y > 420 && !drawer.classList.contains('open'));
+    hdr.classList.toggle('solid', solidAlways || y > 60);
+    hdr.classList.toggle('hide', y > last && y > 420 && !(drawer && drawer.classList.contains('open')));
     last = y;
   }, {passive:true});
 
@@ -87,6 +93,7 @@
   var cmp = document.getElementById('cmp'),
       imgB = document.getElementById('imgB'), imgA = document.getElementById('imgA'), drag = false;
   function setPos(p){
+    if (!cmp) return;
     p = Math.max(3, Math.min(97, p));
     cmp.style.setProperty('--pos', p + '%');
     cmp.setAttribute('aria-valuenow', Math.round(p));
@@ -95,6 +102,7 @@
     var r = cmp.getBoundingClientRect();
     setPos((e.clientX - r.left) / r.width * 100);
   }
+  if (cmp && imgB && imgA){
   cmp.addEventListener('pointerdown', function(e){
     drag = true; cmp.setPointerCapture(e.pointerId); fromEvent(e);
   });
@@ -115,6 +123,7 @@
       setPos(50);
     });
   });
+  }
 
 
   /* ---------- fade-in الفيديو ---------- */
@@ -470,7 +479,10 @@
 
   /* ---------- شريط التقدّم + السكشن النشط ---------- */
   var prog = document.getElementById('prog');
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  /* في الصفحات الداخلية روابط النافيجيشن تصير ../index.html#depts وهي ليست
+     محدِّدًا صالحًا لـquerySelector — فنقتصر على الروابط الداخلية للصفحة نفسها */
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav a'))
+    .filter(function(a){ return (a.getAttribute('href') || '').charAt(0) === '#'; });
   var targets = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
   var ticking = false;
   function onScroll(){

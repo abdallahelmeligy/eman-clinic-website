@@ -1294,3 +1294,58 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
 .offer2:hover .offer2__go i{width:34px}
 .offers2__cta{display:flex;justify-content:center;margin-block-start:clamp(20px,3vw,30px)}
 .offers2__cta .btn{min-height:52px;padding-inline:30px}
+
+/* ================================================================
+   المرحلة ٢ — صفحة الطبيبة  doctors/<slug>.html
+   كل القيم هنا منسوخة من .modal--doc و .modal__bio المعتمدتين
+   حتى تبدو الصفحة مطابقة للنافذة. لا لون جديد ولا خط جديد ولا توكن جديد.
+   ================================================================ */
+.inner main{padding-block-start:clamp(84px,13vw,112px)}
+.crumb{font-size:.8rem;color:#6b6b76}
+.crumb a{color:var(--purple)}
+.crumb span{margin-inline:8px;color:var(--gold)}
+
+.dpg{display:grid;gap:clamp(18px,3vw,30px);justify-items:center;
+  max-width:min(720px,100%);margin-inline:auto;
+  background:linear-gradient(178deg,#FBF8FC 0%,#F4EDF8 100%);
+  padding:clamp(26px,5vw,42px) clamp(18px,4vw,38px) clamp(28px,5vw,44px);
+  border-start-start-radius:var(--rad-lg,26px);border-end-end-radius:var(--rad-lg,26px);
+  border-start-end-radius:var(--rad-sm,5px);border-end-start-radius:var(--rad-sm,5px)}
+.dpg__media img{width:clamp(150px,42vw,196px);height:clamp(150px,42vw,196px);
+  border-radius:50%;object-fit:cover;object-position:top center;
+  border:3px solid var(--purple);background:linear-gradient(168deg,#EFE6F8,#F6EFE0);
+  box-shadow:0 20px 44px -22px rgba(59,26,85,.55);display:block}
+.dpg__b{text-align:center;width:100%}
+.dpg__k{color:var(--gold-ink);letter-spacing:.18em;font-family:var(--font-body);
+  font-size:.7rem;font-weight:600;display:block;margin-block-end:8px}
+.dpg__b h1{font-size:clamp(1.5rem,6vw,2.1rem);color:var(--purple)}
+.dpg__b h1::before{content:"|";color:var(--gold);margin-inline-end:10px;font-weight:300}
+.dpg__spec{color:#6b5a3a;font-size:.92rem;margin-block-start:6px}
+.dpg__bio{margin:22px 0 0;padding:20px 18px;text-align:start;
+  background:rgba(255,255,255,.75);border:1px solid rgba(102,45,145,.12);
+  border-start-start-radius:22px;border-end-end-radius:22px}
+.dpg__bio ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.dpg__bio h2{font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.16em;
+  color:var(--purple);margin:0 0 12px}
+.dpg__bio li{display:flex;gap:10px;font-size:.88rem;line-height:1.85;color:#4a4a52}
+.dpg__bio li::before{content:"";width:6px;height:6px;flex:none;margin-block-start:10px;
+  background:var(--gold);border-start-start-radius:5px;border-end-end-radius:5px}
+.dpg__cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-block-start:24px}
+
+html[data-theme="dark"] .dpg{background:linear-gradient(178deg,#221936,#1A1227)}
+html[data-theme="dark"] .dpg__b h1{color:#D9BFF2}
+html[data-theme="dark"] .dpg__spec{color:#DFC98F}
+html[data-theme="dark"] .dpg__bio{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)}
+html[data-theme="dark"] .dpg__bio li{color:#C9C0D8}
+html[data-theme="dark"] .crumb{color:#C9C0D8}
+html[data-theme="dark"] .crumb a{color:#D9BFF2}
+
+/* ================================================================
+   حارس: لو الجافاسكربت معطّل أو فشل تحميله، لا تُخفِ المحتوى.
+   .rv و .mask يعتمدان على كلاس .in الذي يضيفه IntersectionObserver،
+   فبدون جافاسكربت تبقى الصفحة بيضاء تمامًا. السطر التالي يلغي إخفاءها.
+   يعمل مع <script>document.documentElement.classList.add('js')</script>
+   الموجود في <head> كل صفحة. مع تفعيل الجافاسكربت لا يتغيّر أي شيء.
+   ================================================================ */
+html:not(.js) .rv{opacity:1;transform:none}
+html:not(.js) .shead h2>span.mask{transform:none}
