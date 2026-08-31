@@ -1331,6 +1331,11 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
 .dpg__bio li::before{content:"";width:6px;height:6px;flex:none;margin-block-start:10px;
   background:var(--gold);border-start-start-radius:5px;border-end-end-radius:5px}
 .dpg__cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-block-start:24px}
+/* ‏.btn--out الأساسي أبيض لأنه مصمَّم للخلفيات الغامقة (الدروار والفوتر والهيرو).
+   كارت الطبيبة فاتح، فالنص الأبيض عليه تباينه 1.05 = غير مرئي.
+   نفس معالجة #branches .btn--out المعتمدة: بنفسجي على الفاتح. */
+.dpg__cta .btn--out{color:var(--purple);border-color:rgba(102,45,145,.35)}
+.dpg__cta .btn--out:hover{background:var(--purple-mist);border-color:var(--purple)}
 
 html[data-theme="dark"] .dpg{background:linear-gradient(178deg,#221936,#1A1227)}
 html[data-theme="dark"] .dpg__b h1{color:#D9BFF2}
