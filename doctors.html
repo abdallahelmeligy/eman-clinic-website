@@ -98,6 +98,10 @@
       <p>فريق طبي نسائي بالكامل في الأقسام الثلاثة: الجلدية والتجميل والليزر، والنساء والولادة، وطب وجراحة الأسنان. اضغطي على أي طبيبة للاطّلاع على خبراتها وشهاداتها وحجز موعد معها.</p>
     </div>
 
+    <!-- المعرّف railDoc مقصود: بطاقات الطبيبات ترث أنماطه المعتمدة من
+         الصفحة الرئيسية حرفيًا (التدرّج البنفسجي والصورة و«الملف الشخصي»)،
+         و.cardgrid وحدها تبدّل التخطيط من كاروسيل أفقي إلى شبكة.
+         الاسم يوحي بكاروسيل لكن لا كاروسيل هنا — التخطيط شبكة. -->
     <div class="cardgrid rv" id="railDoc">
         <a class="card" href="doctors/dr-eman-alabra.html"><img src="assets/img/doctors/dr-eman-alabra.webp" alt="د. إيمان العبرة" loading="lazy" decoding="async" width="351" height="435"><div class="card__b"><b>د. إيمان العبرة</b><span>استشارية أمراض وجراحة النساء والولادة</span></div></a>
         <a class="card" href="doctors/dr-eman-abdulaziz.html"><img src="assets/img/doctors/dr-eman-abdulaziz.webp" alt="د. إيمان عبد العزيز" loading="lazy" decoding="async" width="377" height="412"><div class="card__b"><b>د. إيمان عبد العزيز</b><span>أخصائية النساء والتوليد</span></div></a>
@@ -168,6 +172,9 @@
     <div class="copy">
       <span>© 2026 عيادات د. إيمان العبرة — الرياض</span>
       <span>الأسعار والخطط العلاجية تُحدَّد بعد الكشف</span>
+      <!-- SWAP: رقم ترخيص المنشأة الصحية — استبدل السطر التالي بالرقم من العميلة
+           ثم احذف hidden. مثال: <span>ترخيص وزارة الصحة رقم ١٢٣٤٥</span> -->
+      <span hidden>ترخيص وزارة الصحة رقم —</span>
     </div>
   </div>
 </footer>
