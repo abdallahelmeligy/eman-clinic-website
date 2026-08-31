@@ -1350,7 +1350,7 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
    كارت الطبيبة فاتح، فالنص الأبيض عليه تباينه 1.05 = غير مرئي.
    نفس معالجة #branches .btn--out المعتمدة: بنفسجي على الفاتح. */
 .dpg__cta .btn--out{color:var(--purple);border-color:rgba(102,45,145,.35)}
-.dpg__cta .btn--out:hover{background:var(--purple-mist);border-color:var(--purple)}
+.dpg__cta .btn--out:hover{background:var(--purple-mist,rgba(102,45,145,.08));border-color:var(--purple)}
 
 /* إيقاع الصفحة الداخلية: البطاقة والفوتر كانا متباعدين أكثر من اللازم.
    ‏.sec العام يعطي حتى 104px أسفل — نقلّصها هنا فقط ونترك للفوتر مسافة
@@ -1385,30 +1385,44 @@ html:not(.js) .shead h2>span.mask{transform:none}
    ================================================================ */
 /* صورة الجهاز ليست بورتريه دائريًا: إطار فاتح موحّد لأن بعض صور الأجهزة
    قصاصات شفافة وبعضها بخلفية بيضاء (تحديث V18) */
-.dpg--dev .dpg__media img{width:auto;height:auto;max-width:min(240px,66%);max-height:280px;
+/* إطار مربّع بعرض محدَّد: النسبة المئوية السابقة (max-width:66%) كانت تُحسب
+   على حاوية عرضها shrink-to-fit فينتج قياس دائري وتمركز غير مضبوط.
+   القياس الثابت + object-fit:contain يمركز الصورة بدقة مهما اختلفت نسبتها. */
+.dpg--dev .dpg__media img{width:clamp(200px,32vw,300px);height:clamp(200px,32vw,300px);
   border-radius:0;border:0;box-shadow:none;object-fit:contain;
+  display:block;margin-inline:auto;
   background:#F4F0F9;padding:14px;
   border-start-start-radius:22px;border-end-end-radius:22px}
 .dpg--dev .dpg__b h1::before{content:none}
 .dpg__en{display:block;font-family:var(--font-latin);font-size:.68rem;letter-spacing:.22em;
   color:var(--gold-ink);margin-block-start:6px}
 
-.dvg__uses{list-style:none;margin:16px 0 0;padding:0;
-  display:flex;flex-wrap:wrap;gap:7px;justify-content:center}
-.dvg__uses li{font-size:.76rem;color:var(--purple);background:var(--purple-mist);padding:6px 11px;
+/* شرائح الاستخدامات — كتل حقيقية بخلفية وحواف ومسافة داخلية، لا نص سائب */
+.dvg__uses{list-style:none;margin:18px 0 0;padding:0;
+  display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.dvg__uses li{font-size:.78rem;line-height:1.5;color:var(--purple);background:var(--purple-mist,rgba(102,45,145,.08));
+  padding:8px 14px;border:1px solid rgba(102,45,145,.12);
   border-start-start-radius:12px;border-end-end-radius:12px}
-.dvg__par{margin-block-start:12px;color:#5a5a63;font-size:.93rem;line-height:2;text-align:start}
+/* فقرات الشرح تبدأ من جهة البداية بعرض قراءة محدود — النص العربي الطويل
+   المتمركز يكسر خط بداية القراءة في كل سطر ويُتعب العين */
+.dvg__par{margin-block-start:14px;color:#5a5a63;font-size:.93rem;line-height:2;
+  text-align:start;max-width:62ch;margin-inline:auto}
 .dvg__gh{font-family:var(--font-body);font-size:.74rem;font-weight:600;letter-spacing:.16em;
-  color:var(--purple);margin:26px 0 12px;padding-block-end:10px;border-block-end:1px solid var(--grey);
-  text-align:start}
-.dvg__gal{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
+  color:var(--purple);margin:26px 0 clamp(18px,3vw,26px);
+  padding-block-end:10px;border-block-end:1px solid var(--grey);text-align:start}
+/* auto-fit لا auto-fill: الصورة الفردية في آخر صف تتمدّد بدل ترك خانة فارغة */
+.dvg__gal{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
 .dvg__gal figure{margin:0;background:var(--paper);overflow:hidden;
   border:1px solid rgba(102,45,145,.1);
   border-start-start-radius:18px;border-end-end-radius:18px}
 /* صور المعرض مربّعة (840×840) وكل صورة زوج قبل/بعد كامل — تُعرض بنسبتها
    الطبيعية بلا قص، بعكس النافذة التي تقصّها إلى 4:3 لضيق مساحتها */
 .dvg__gal img{width:100%;height:auto;display:block}
-.dvg__gal figcaption{padding:9px 11px;font-size:.76rem;line-height:1.7;color:#6e6e78;text-align:start}
+.dvg__gal figcaption{padding:12px 14px;font-size:.78rem;line-height:1.75;color:#4a4a52;text-align:start}
+
+/* فيكتور الخلفية المتحرك مكانه الرئيسية — يشتّت في صفحة غرضها القراءة،
+   وإخفاؤه يوفّر أيضًا حسابات الحركة عند التمرير في الصفحات الداخلية */
+.inner .gem{display:none}
 
 html[data-theme="dark"] .dvg__par{color:#C9C0D8}
 html[data-theme="dark"] .dvg__gal figure{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)}
