@@ -1377,3 +1377,41 @@ html[data-theme="dark"] .dpg__bio li:first-child{color:#F2EDF8}
    ================================================================ */
 html:not(.js) .rv{opacity:1;transform:none}
 html:not(.js) .shead h2>span.mask{transform:none}
+
+/* ================================================================
+   المرحلة ٢ — صفحة الجهاز  devices/<slug>.html
+   تبني على .dpg نفسها (نفس البطاقة والمسافات والأزرار) وتضيف ما يخصّ
+   الجهاز فقط. القيم منسوخة من .modal--dev و.modal__gal المعتمدتين.
+   ================================================================ */
+/* صورة الجهاز ليست بورتريه دائريًا: إطار فاتح موحّد لأن بعض صور الأجهزة
+   قصاصات شفافة وبعضها بخلفية بيضاء (تحديث V18) */
+.dpg--dev .dpg__media img{width:auto;height:auto;max-width:min(240px,66%);max-height:280px;
+  border-radius:0;border:0;box-shadow:none;object-fit:contain;
+  background:#F4F0F9;padding:14px;
+  border-start-start-radius:22px;border-end-end-radius:22px}
+.dpg--dev .dpg__b h1::before{content:none}
+.dpg__en{display:block;font-family:var(--font-latin);font-size:.68rem;letter-spacing:.22em;
+  color:var(--gold-ink);margin-block-start:6px}
+
+.dvg__uses{list-style:none;margin:16px 0 0;padding:0;
+  display:flex;flex-wrap:wrap;gap:7px;justify-content:center}
+.dvg__uses li{font-size:.76rem;color:var(--purple);background:var(--purple-mist);padding:6px 11px;
+  border-start-start-radius:12px;border-end-end-radius:12px}
+.dvg__par{margin-block-start:12px;color:#5a5a63;font-size:.93rem;line-height:2;text-align:start}
+.dvg__gh{font-family:var(--font-body);font-size:.74rem;font-weight:600;letter-spacing:.16em;
+  color:var(--purple);margin:26px 0 12px;padding-block-end:10px;border-block-end:1px solid var(--grey);
+  text-align:start}
+.dvg__gal{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
+.dvg__gal figure{margin:0;background:var(--paper);overflow:hidden;
+  border:1px solid rgba(102,45,145,.1);
+  border-start-start-radius:18px;border-end-end-radius:18px}
+/* صور المعرض مربّعة (840×840) وكل صورة زوج قبل/بعد كامل — تُعرض بنسبتها
+   الطبيعية بلا قص، بعكس النافذة التي تقصّها إلى 4:3 لضيق مساحتها */
+.dvg__gal img{width:100%;height:auto;display:block}
+.dvg__gal figcaption{padding:9px 11px;font-size:.76rem;line-height:1.7;color:#6e6e78;text-align:start}
+
+html[data-theme="dark"] .dvg__par{color:#C9C0D8}
+html[data-theme="dark"] .dvg__gal figure{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)}
+html[data-theme="dark"] .dvg__gal figcaption{color:#B9B0CA}
+html[data-theme="dark"] .dvg__gh{border-block-end-color:rgba(255,255,255,.14)}
+html[data-theme="dark"] .dpg__en{color:#DFC98F}

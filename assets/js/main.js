@@ -168,11 +168,14 @@
   Array.prototype.forEach.call(document.querySelectorAll('#railArt .art'), function(a){
     push(a.querySelector('.art__t').textContent,'مقال','#articles');
   });
+  /* نتيجة البحث توصل بالزائرة إلى الوجهة النهائية مباشرة: لو البطاقة رابط
+     لصفحة مستقلة نأخذ رابطها، وإلا نرجع للقسم في الرئيسية. تُطبَّق تلقائيًا
+     على الأجهزة أيضًا بمجرد أن تصير بطاقاتها روابط. */
   Array.prototype.forEach.call(document.querySelectorAll('#railDoc .card'), function(c){
-    push(c.querySelector('b').textContent, c.querySelector('span') ? c.querySelector('span').textContent : 'طبيبة','#doctors');
+    push(c.querySelector('b').textContent, c.querySelector('span') ? c.querySelector('span').textContent : 'طبيبة', c.getAttribute('href') || '#doctors');
   });
   Array.prototype.forEach.call(document.querySelectorAll('#railDev .card'), function(c){
-    push(c.querySelector('b').textContent,'جهاز','#devices');
+    push(c.querySelector('b').textContent,'جهاز', c.getAttribute('href') || '#devices');
   });
   Array.prototype.forEach.call(document.querySelectorAll('.balist button'), function(b){
     push(b.textContent,'قبل وبعد','#results');
