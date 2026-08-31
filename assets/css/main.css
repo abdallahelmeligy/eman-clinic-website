@@ -1423,9 +1423,17 @@ html:not(.js) .shead h2>span.mask{transform:none}
 .dvg__gal img{width:100%;height:auto;display:block}
 .dvg__gal figcaption{padding:12px 14px;font-size:.78rem;line-height:1.75;color:#4a4a52;text-align:start}
 
-/* فيكتور الخلفية المتحرك مكانه الرئيسية — يشتّت في صفحة غرضها القراءة،
-   وإخفاؤه يوفّر أيضًا حسابات الحركة عند التمرير في الصفحات الداخلية */
-.inner .gem{display:none}
+/* الفيكتور باقٍ في كل الصفحات، لكنه أهدأ في الداخلية: أخفت وأصغر وأبعد
+   عن مركز القراءة — غرض الصفحة الداخلية القراءة لا الانبهار.
+   الرئيسية تبقى على .22 كما هي. */
+/* ⚠️ الإزاحة بالنسبة المئوية تُحسب على عرض الشاشة بينما العرض بـclamp:
+   ‏-16% عند شاشة 1000px = -158px، والعنصر 170px، فلا يظهر منه إلا 12px.
+   الإزاحة الآن -4% فيبقى نحو ثلاثة أرباعه داخل الشاشة كما في الرئيسية. */
+.inner .gem{opacity:.14;width:clamp(150px,17vw,260px);
+  inset-inline-end:-4%;inset-block-start:26%}
+html[data-theme="dark"] .inner .gem{opacity:.20}
+@media(max-width:600px){.inner .gem{opacity:.12;inset-inline-end:-10%;inset-block-start:30%}}
+@media(max-width:600px){html[data-theme="dark"] .inner .gem{opacity:.17}}
 
 html[data-theme="dark"] .dvg__par{color:#C9C0D8}
 html[data-theme="dark"] .dvg__gal figure{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)}
