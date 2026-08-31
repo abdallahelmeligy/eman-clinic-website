@@ -1,0 +1,535 @@
+{
+ "brand": {
+  "name_ar": "عيادات د. إيمان العبرة",
+  "name_en": "Dr. Eman Alabra Clinics",
+  "tagline_ar": "جمال يبدأ بثقة",
+  "tagline_en": "Where Beauty Meets Confidence",
+  "experience_years": 16,
+  "specialties": [
+   "الجلدية والتجميل والليزر",
+   "النساء والولادة",
+   "طب وجراحة الأسنان"
+  ],
+  "colors": {
+   "purple": "#662D91",
+   "gold": "#C2A35C",
+   "light": "#D9DDE6",
+   "black": "#1A1A1A",
+   "purple_tints": [
+    "#7D45A6",
+    "#9862BC",
+    "#B58AD1",
+    "#D6C1E6"
+   ],
+   "gold_tints": [
+    "#D1B46F",
+    "#DFC98F",
+    "#EDDFB3",
+    "#F5EFE0"
+   ],
+   "light_tints": [
+    "#E3E6ED",
+    "#ECEEF3",
+    "#F4F5F8",
+    "#FAFBFC"
+   ]
+  },
+  "color_balance": {
+   "gold": "30%",
+   "purple": "30%",
+   "light_grey": "25%",
+   "black": "15%"
+  },
+  "usage": {
+   "purple": "العناوين الرئيسية والأزرار والهوية البصرية",
+   "gold": "التفاصيل والخطوط الفاصلة والأيقونات الفاخرة",
+   "light_grey": "الخلفيات والنصوص الثانوية",
+   "black": "النصوص الأساسية والعناوين القوية"
+  },
+  "fonts": {
+   "arabic_display": "Zain Mob",
+   "arabic_display_alt": "Thmanyah (لم يُرسل)",
+   "latin": "Source Serif Variable",
+   "uploaded": [
+    "zain mob Regular 400 (197 glyph فقط)",
+    "BoutrosMBCDinkum Medium 500 (خط تجاري — يحتاج ترخيص للويب)"
+   ]
+  },
+  "conflicts": {
+   "experience_years": "الهوية تقول 16 · اللينكتري يقول +15 · الموقع القديم يقول 12 — المعتمد للموقع: 16"
+  }
+ },
+ "contact": {
+  "whatsapp": "966112401164",
+  "whatsapp_link": "https://wa.me/966112401164?text=مرحباً، أرغب بحجز موعد في عيادات د. إيمان العبرة",
+  "phones": [
+   "0112401164",
+   "0583120083",
+   "0555474372"
+  ],
+  "email": "info@emanclinic.com",
+  "current_site": "https://emanclinic.com",
+  "instagram": "https://www.instagram.com/dremanalabra",
+  "tiktok": "https://www.tiktok.com/@dremanalabra",
+  "snapchat": "https://snapchat.com/t/NFeI3kPK",
+  "youtube": "https://youtube.com/@clinicdr.emannnn",
+  "linktree": "https://marketingdremanclinics.github.io/linktree/",
+  "facebook": "غير مؤكد — لم يظهر في أي مصدر رسمي",
+  "whatsapp_alt": "966583120083",
+  "snapchat_handle": "dremanalabraclinics",
+  "store": "https://divmih.zid.store",
+  "tagline_social": "الجمال فن، ونحن نُتقن تفاصيله"
+ },
+ "branches": [
+  {
+   "name": "فرع القدس",
+   "exit": "مخرج 10",
+   "address": "مخرج 10، الطريق الدائري الشرقي، حي القدس، الرياض",
+   "map": "https://maps.app.goo.gl/Ab1t9uuchzdZj1yj8",
+   "hours_ar": "٩ صباحًا — ١٠ مساءً",
+   "hours_24": "09:00–22:00",
+   "days": "يوميًا"
+  },
+  {
+   "name": "فرع قرطبة",
+   "exit": "مخرج 8",
+   "address": "الطريق الدائري الشمالي الفرعي، حي قرطبة، الرياض 13244",
+   "map": "https://maps.app.goo.gl/3NTUXfLrPBw7P9ZK8",
+   "hours_ar": "١٢ ظهرًا — ٩ مساءً",
+   "hours_24": "12:00–21:00",
+   "days": "يوميًا"
+  }
+ ],
+ "services_with_articles": [
+  {
+   "slug": "skin-boosters",
+   "ar": "إبر النضارة",
+   "en": "Skin Boosters",
+   "source": "content/articles-pdf/إبر النضارة -سايت.pdf"
+  },
+  {
+   "slug": "hydro-lift",
+   "ar": "الشد المائي",
+   "en": "Hydro Lift",
+   "source": "content/articles-pdf/الشد المائي سايت .pdf"
+  },
+  {
+   "slug": "attiva-lift",
+   "ar": "الشد التجميلي بجهاز الأتيفا",
+   "en": "Attiva Skin Tightening",
+   "source": "content/articles-pdf/شد البشرة باستخدام جهاز الأتيفا.pdf"
+  },
+  {
+   "slug": "lip-filler",
+   "ar": "فيلر الشفايف",
+   "en": "Lip Filler",
+   "source": "content/articles-pdf/فيــلر الشفايف .pdf"
+  },
+  {
+   "slug": "full-face-filler",
+   "ar": "فيلر فول فيس",
+   "en": "Full Face Filler",
+   "source": "content/articles-pdf/فيلر فول فيـس.pdf"
+  }
+ ],
+ "video": {
+  "file": "assets/video/intro-1080.mp4",
+  "mobile": "assets/video/intro-720.mp4",
+  "poster": "assets/video/intro-poster.jpg",
+  "duration_s": 11.5,
+  "aspect": "9:16 (1080x1920)",
+  "audio": "مكتوم/محذوف",
+  "ends_on": "اللوجو على خلفية سوداء"
+ },
+ "doctors": [
+  {
+   "slug": "dr-eman-abdulaziz",
+   "name": "د. إيمان عبد العزيز",
+   "specialty": "أخصائية النساء والتوليد",
+   "img": "assets/img/doctors/dr-eman-abdulaziz.webp",
+   "size": [
+    377,
+    412
+   ]
+  },
+  {
+   "slug": "dr-eman-alabra",
+   "name": "د. إيمان العبرة",
+   "specialty": "استشارية أمراض وجراحة النساء والولادة",
+   "img": "assets/img/doctors/dr-eman-alabra.webp",
+   "size": [
+    351,
+    435
+   ]
+  },
+  {
+   "slug": "dr-ghada-morsi",
+   "name": "د. غادة مرسي",
+   "specialty": "نائب جلدية وتجميل",
+   "img": "assets/img/doctors/dr-ghada-morsi.webp",
+   "size": [
+    308,
+    368
+   ]
+  },
+  {
+   "slug": "dr-lamy-warghi",
+   "name": "د. لمياء ورغي",
+   "specialty": "طب وجراحة الأسنان",
+   "img": "assets/img/doctors/dr-lamy-warghi.webp",
+   "size": [
+    400,
+    397
+   ]
+  },
+  {
+   "slug": "dr-mai-mansi",
+   "name": "د. مي منسي",
+   "specialty": "نائب جلدية وتجميل",
+   "img": "assets/img/doctors/dr-mai-mansi.webp",
+   "size": [
+    334,
+    398
+   ]
+  },
+  {
+   "slug": "dr-mervat-aloush",
+   "name": "د. ميرفت علوش",
+   "specialty": "نائب أمراض جلدية وتجميل",
+   "img": "assets/img/doctors/dr-mervat-aloush.webp",
+   "size": [
+    322,
+    414
+   ]
+  },
+  {
+   "name": "د. سلمى جعفر",
+   "specialty": "استشارية أمراض النساء والتوليد والعقم",
+   "img": "assets/img/doctors/dr-salma-jaafar.webp"
+  }
+ ],
+ "devices": [
+  {
+   "slug": "attiva",
+   "name": "جهاز الأتيفا",
+   "name_en": "ATTIVA",
+   "img": "assets/img/devices/attiva.webp",
+   "size": [
+    367,
+    464
+   ],
+   "sub": "RF Skin Tightening",
+   "hero": "شد البشرة وتحفيز الكولاجين بدون جراحة",
+   "lede": "تقنية تعتمد على الطاقة الراديوية الحرارية لتحفيز إنتاج الكولاجين وشد الأنسجة من الداخل، دون جراحة أو فترة تعافٍ طويلة.",
+   "uses": [
+    "شد البشرة المترهلة",
+    "تحسين مرونة الجلد",
+    "تحديد ملامح الوجه والفك",
+    "تقليل التجاعيد والخطوط الدقيقة",
+    "تحسين ترهل الرقبة وأسفل الوجه"
+   ],
+   "page": "https://marketingdremanclinics.github.io/Attiva/"
+  },
+  {
+   "slug": "deka",
+   "name": "جهاز الديكا الإيطالي",
+   "name_en": "DEKA Again",
+   "img": "assets/img/devices/deka.webp",
+   "size": [
+    345,
+    613
+   ],
+   "sub": "Alexandrite + Nd:YAG · صناعة إيطالية",
+   "hero": "إزالة الشعر بالليزر — تقنية إيطالية",
+   "lede": "جهاز ليزر إيطالي يجمع تقنيتي Alexandrite 755nm و Nd:YAG 1064nm مع تقنية Moveo.",
+   "uses": [
+    "تقليل نمو الشعر غير المرغوب فيه",
+    "استهداف الشعر السميك والرفيع",
+    "تقليل الشعر تحت الجلد",
+    "جلسات أسرع وأكثر راحة"
+   ],
+   "page": "https://marketingdremanclinics.github.io/Deka-again/"
+  },
+  {
+   "slug": "fractional-laser-1",
+   "name": "جهاز الفراكشنال ليزر",
+   "name_en": "Fractional CO2",
+   "img": "assets/img/devices/fractional-laser-1.webp",
+   "size": [
+    211,
+    607
+   ],
+   "sub": "Skin Resurfacing",
+   "hero": "تجديد البشرة بالليزر الدقيق",
+   "lede": "آلاف النبضات الدقيقة تستهدف مناطق محددة من الجلد مع الحفاظ على الأنسجة المحيطة، لتسريع التعافي.",
+   "uses": [
+    "تمهيد الندبات وتوحيد مستوى الجلد",
+    "تقليل التجاعيد حول الفم والعينين",
+    "توحيد لون البشرة وتقليل التصبغات",
+    "تحسين مظهر المسام الواسعة"
+   ],
+   "page": "https://marketingdremanclinics.github.io/fractional-CO2/"
+  },
+  {
+   "slug": "magellan-plasma",
+   "name": "جهاز بلازما ماجلان",
+   "name_en": "Magellan PRP",
+   "img": "assets/img/devices/magellan-plasma.webp",
+   "size": [
+    267,
+    461
+   ],
+   "sub": "Platelet-Rich Plasma",
+   "hero": "تجديد البشرة وتحفيز نمو الشعر",
+   "lede": "نظام لتحضير البلازما الغنية بالصفائح الدموية من دم المريضة نفسها، لتحفيز التجدد الطبيعي.",
+   "uses": [
+    "تحسين نضارة البشرة",
+    "تحفيز الكولاجين الطبيعي",
+    "دعم نمو الشعر وتقليل التساقط",
+    "تحسين مظهر الندبات وآثار حب الشباب"
+   ],
+   "page": "https://marketingdremanclinics.github.io/Magellan-PRP/"
+  },
+  {
+   "slug": "morpheus-pro",
+   "name": "جهاز مورفيوس برو",
+   "name_en": "Morpheus Pro",
+   "img": "assets/img/devices/morpheus-pro.webp",
+   "size": [
+    301,
+    524
+   ],
+   "sub": "by InMode",
+   "hero": "شد البشرة وتجديد الكولاجين بدون جراحة",
+   "lede": "يجمع بين الوخز الدقيق والترددات الراديوية لتحفيز الكولاجين من أعماق البشرة.",
+   "uses": [
+    "شد البشرة المترهلة",
+    "تقليل التجاعيد والخطوط الدقيقة",
+    "تحسين آثار الحبوب والندبات",
+    "تصغير المسام",
+    "تحسين ملمس البشرة"
+   ],
+   "page": "https://marketingdremanclinics.github.io/Morpheus/"
+  },
+  {
+   "slug": "splendor-x",
+   "name": "جهاز سبلندر إكس",
+   "name_en": "Splendor X",
+   "img": "assets/img/devices/splendor-x.webp",
+   "size": [
+    323,
+    575
+   ],
+   "sub": "Alexandrite + Nd:YAG",
+   "hero": "إزالة الشعر بالليزر",
+   "lede": "يجمع تقنيتي Alexandrite 755nm و Nd:YAG 1064nm في جهاز واحد، مع نظام تبريد متطور يناسب مختلف أنواع البشرة.",
+   "uses": [
+    "تقليل نمو الشعر غير المرغوب فيه",
+    "تغطية مساحات واسعة بسرعة",
+    "راحة أكبر بفضل التبريد",
+    "مناسب لمختلف أنواع البشرة"
+   ],
+   "page": "https://marketingdremanclinics.github.io/Splendor-X/"
+  },
+  {
+   "slug": "ulthera-prime",
+   "name": "جهاز الألثيرا بريم",
+   "name_en": "Ultherapy",
+   "img": "assets/img/devices/ulthera-prime.webp",
+   "size": [
+    319,
+    576
+   ],
+   "sub": "Microfocused Ultrasound",
+   "hero": "شد الوجه والرقبة بدون جراحة",
+   "lede": "موجات فوق صوتية مركزة تحفّز إنتاج الكولاجين في الطبقات العميقة من الجلد، لشد البشرة وتحسين مظهر الترهلات بطريقة غير جراحية.",
+   "uses": [
+    "شد البشرة وتحسين مظهر الترهلات",
+    "رفع الحاجبين",
+    "تحديد خط الفك والذقن",
+    "شد الرقبة",
+    "تحفيز الكولاجين الطبيعي"
+   ],
+   "page": "https://marketingdremanclinics.github.io/Ulthera/"
+  },
+  {
+   "slug": "secret-rf",
+   "name": "جهاز سيكريت RF",
+   "name_en": "SECRET RF",
+   "img": "assets/img/devices/secret-rf.webp",
+   "hero": "إبر دقيقة + ترددات راديوية لتجديد البشرة",
+   "uses": [
+    "ندبات حب الشباب",
+    "المسام الواسعة",
+    "التجاعيد والخطوط الدقيقة",
+    "علامات التمدد",
+    "شد البشرة وتحفيز الكولاجين"
+   ],
+   "page": ""
+  },
+  {
+   "slug": "sonar-voluson",
+   "name": "جهاز السونار 2D و4D",
+   "name_en": "VOLUSON 2D / 4D",
+   "img": "assets/img/devices/sonar-voluson.webp",
+   "hero": "متابعة الحمل ونمو الجنين بتقنيتَي 2D و4D",
+   "uses": [
+    "متابعة الحمل ونمو الجنين",
+    "القياسات وتقييم النمو",
+    "تصوير مجسّم متحرك للجنين",
+    "الفحوصات النسائية"
+   ],
+   "page": ""
+  }
+ ],
+ "results": [
+  {
+   "slug": "attiva-face-lift",
+   "label": "شد الوجه بجهاز الأتيفا",
+   "before": "assets/img/results/attiva-face-lift-before.webp",
+   "after": "assets/img/results/attiva-face-lift-after.webp"
+  },
+  {
+   "slug": "calcium-temple-filler",
+   "label": "أبرة كالسيوم وفيلر أصداغ",
+   "before": "assets/img/results/calcium-temple-filler-before.webp",
+   "after": "assets/img/results/calcium-temple-filler-after.webp"
+  },
+  {
+   "slug": "cellulite",
+   "label": "إزالة السيلوليت",
+   "before": "assets/img/results/cellulite-before.webp",
+   "after": "assets/img/results/cellulite-after.webp"
+  },
+  {
+   "slug": "full-face-1",
+   "label": "فيلر فول فيس",
+   "before": "assets/img/results/full-face-1-before.webp",
+   "after": "assets/img/results/full-face-1-after.webp"
+  },
+  {
+   "slug": "full-face-2",
+   "label": "فيلر فول فيس",
+   "before": "assets/img/results/full-face-2-before.webp",
+   "after": "assets/img/results/full-face-2-after.webp"
+  },
+  {
+   "slug": "full-face-botox",
+   "label": "فيلر فول فيس وبوتكس الجبهة",
+   "before": "assets/img/results/full-face-botox-before.webp",
+   "after": "assets/img/results/full-face-botox-after.webp"
+  },
+  {
+   "slug": "hydro-lift-1",
+   "label": "الشد المائي",
+   "before": "assets/img/results/hydro-lift-1-before.webp",
+   "after": "assets/img/results/hydro-lift-1-after.webp"
+  },
+  {
+   "slug": "hydro-lift-2",
+   "label": "الشد المائي",
+   "before": "assets/img/results/hydro-lift-2-before.webp",
+   "after": "assets/img/results/hydro-lift-2-after.webp"
+  },
+  {
+   "slug": "hydro-lift-collagen",
+   "label": "الشد المائي ومحفزات الكولاجين",
+   "before": "assets/img/results/hydro-lift-collagen-before.webp",
+   "after": "assets/img/results/hydro-lift-collagen-after.webp"
+  },
+  {
+   "slug": "jawline",
+   "label": "تحديد الفك",
+   "before": "assets/img/results/jawline-before.webp",
+   "after": "assets/img/results/jawline-after.webp"
+  },
+  {
+   "slug": "lip-filler-1",
+   "label": "فيلر الشفايف",
+   "before": "assets/img/results/lip-filler-1-before.webp",
+   "after": "assets/img/results/lip-filler-1-after.webp"
+  },
+  {
+   "slug": "lip-filler-2",
+   "label": "فيلر الشفايف",
+   "before": "assets/img/results/lip-filler-2-before.webp",
+   "after": "assets/img/results/lip-filler-2-after.webp"
+  },
+  {
+   "slug": "lip-filler-cheeks",
+   "label": "فيلر شفايف ووجنات",
+   "before": "assets/img/results/lip-filler-cheeks-before.webp",
+   "after": "assets/img/results/lip-filler-cheeks-after.webp"
+  },
+  {
+   "slug": "lip-filler-jawline",
+   "label": "فيلر شفايف وتحديد الفك",
+   "before": "assets/img/results/lip-filler-jawline-before.webp",
+   "after": "assets/img/results/lip-filler-jawline-after.webp"
+  },
+  {
+   "slug": "skin-booster",
+   "label": "إبر النضارة",
+   "before": "assets/img/results/skin-booster-before.webp",
+   "after": "assets/img/results/skin-booster-after.webp"
+  }
+ ],
+ "notes": {
+  "device_copy_source": "مستخرج من لاندنج بيدجات الأجهزة على GitHub Pages — أعِد صياغتها للموقع، ولا تنقل الإيموجي أو أرقام غير موثّقة",
+  "removed": "fractional-laser-2 صورة مكررة لنفس الجهاز",
+  "reviews_source": "منقولة نصيًا من كروت الريفيوز — كلها 5 نجوم من جوجل. اعرضها كنص HTML لا كصور، وأضف لينك صفحة جوجل للتحقق.",
+  "reviews_pending": "لينكات مراجعات جوجل المرسلة محمية ولا يمكن قراءتها آليًا — يلزم رابط صفحة النشاط التجاري على جوجل لعرض التقييم الإجمالي"
+ },
+ "reviews": [
+  {
+   "name": "مرام محمد",
+   "rating": 5,
+   "text": "عيادات تجميلية رائعة، حبيت تعاملهم الراقي. وأهم شيء عندي هو التزامهم بالمواعيد وسرعة الرد على الاستفسارات."
+  },
+  {
+   "name": "حصة الشمري",
+   "rating": 5,
+   "text": "كل الشكر والتقدير للدكتورة ميرفت. تعامل رائع وعمل مميز.",
+   "doctor": "د. ميرفت علوش"
+  },
+  {
+   "name": "Hanan S",
+   "rating": 5,
+   "text": "من عيادات التجميل المميزة، وأطباء ذوو خبرة ومهارة عالية. أنصح فيها بقوة، وأسعارهم معقولة مقارنة بجودة الخدمة المقدمة."
+  },
+  {
+   "name": "نوره الشلوي",
+   "rating": 5,
+   "text": "تعاملهم جداً جميل، وهمهم راحة العميلة. جربت عندهم الليزر وتنظيف البشرة، وهذا اللي مخليني دائماً أرجع لهم."
+  },
+  {
+   "name": "Salma Howat",
+   "rating": 5,
+   "text": "تجربة ممتازة مع د. ميرفت، تسلم يدها. شغل لا يُعلى عليه، وما أندم في التعامل معها نهائياً.",
+   "doctor": "د. ميرفت علوش"
+  },
+  {
+   "name": "Haifa Albassami",
+   "rating": 5,
+   "text": "من أفضل عيادات الليزر بالرياض."
+  },
+  {
+   "name": "ام ليال",
+   "rating": 5,
+   "text": "العيادة رهيبة من ناحية النظافة والاهتمام، وأجي من بعيد لهم. سامية إنسانة تستاهل الشكر — دقة بالشغل وسرعة وتفهّم.",
+   "staff": "سامية"
+  },
+  {
+   "name": "R Albader",
+   "rating": 5,
+   "text": "ما شاء الله على يد الدكتورة مي، خفيفة ولا أحس بالإبرة. والإجراء اللي أسويه معها تبان نتيجته وأفضل مما أتوقع. شكراً من كل قلبي.",
+   "doctor": "د. مي منسي"
+  },
+  {
+   "name": "Ashwag Ali",
+   "rating": 5,
+   "text": "دكتورة إيمان عبد العزيز ممتازة جداً.",
+   "doctor": "د. إيمان عبد العزيز"
+  }
+ ]
+}

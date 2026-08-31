@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>نظام الخطوط — عيادات د. إيمان العبرة</title>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<style>
+  :root{
+    --purple:#662D91; --gold:#C2A35C; --light:#D9DDE6; --ink:#1A1A1A;
+    --light-3:#F4F5F8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--light-3);color:var(--ink)}
+  .wrap{max-width:1000px;margin-inline:auto;padding-inline:clamp(16px,5vw,56px);padding-block:clamp(32px,6vw,72px)}
+  .band{background:var(--purple);color:#fff;padding-block:clamp(40px,8vw,88px)}
+  .rule{height:1px;background:var(--gold);opacity:.5;margin-block:clamp(28px,5vw,48px)}
+  .label{font-family:var(--font-latin);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-block-end:12px}
+  .row{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;margin-block:10px}
+  .meta{font-family:var(--font-latin);font-size:.78rem;opacity:.55;direction:ltr}
+  p{max-width:62ch}
+  .swatches{display:flex;flex-wrap:wrap;gap:12px;margin-block:24px}
+  .sw{width:104px;height:104px;border-radius:2px;display:flex;align-items:flex-end;padding:8px;
+      font-family:var(--font-latin);font-size:.66rem;color:#fff;direction:ltr}
+  .card{background:#fff;padding:clamp(20px,4vw,36px);border-inline-start:2px solid var(--gold)}
+</style>
+</head>
+<body>
+
+<div class="band">
+  <div class="wrap">
+    <div class="label">Display — Zain 900</div>
+    <h1 style="font-weight:900;margin:0">جمال يبدأ بثقة</h1>
+    <div class="label" style="margin-block-start:28px">Latin — Source Serif 4</div>
+    <div style="font-family:var(--font-latin);font-size:var(--step-3);font-weight:300;font-style:italic">Where Beauty Meets Confidence</div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="label">Palette</div>
+  <div class="swatches">
+    <div class="sw" style="background:#C2A35C">#C2A35C · 30%</div>
+    <div class="sw" style="background:#662D91">#662D91 · 30%</div>
+    <div class="sw" style="background:#D9DDE6;color:#1A1A1A">#D9DDE6 · 25%</div>
+    <div class="sw" style="background:#1A1A1A">#1A1A1A · 15%</div>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="label">Type scale — Zain</div>
+  <div class="row"><span style="font-family:var(--font-display);font-size:var(--step-6);font-weight:900;line-height:1.1">عيادات د. إيمان العبرة</span><span class="meta">step-6 / 900</span></div>
+  <div class="row"><span style="font-family:var(--font-display);font-size:var(--step-4);font-weight:700">شد الوجه والرقبة بدون جراحة</span><span class="meta">step-4 / 700</span></div>
+  <div class="row"><span style="font-family:var(--font-display);font-size:var(--step-2);font-weight:400">إبر النضارة · الشد المائي · الأتيفا</span><span class="meta">step-2 / 400</span></div>
+  <div class="row"><span style="font-family:var(--font-display);font-size:var(--step-1);font-weight:300">خبرة ١٦ عامًا في رعايتكِ وجمالكِ</span><span class="meta">step-1 / 300</span></div>
+
+  <div class="rule"></div>
+
+  <div class="label">Body — IBM Plex Sans Arabic</div>
+  <div class="card">
+    <p style="font-weight:600;font-size:var(--step-1);margin-block-start:0">إبر النضارة (<span class="latin">Skin Boosters</span>)</p>
+    <p>إبر النضارة هي علاج تجميلي غير جراحي يعتمد على حقن البشرة بمواد فعّالة تساعد على ترطيب الجلد من الداخل وتحسين جودته. الهدف منها ليس تكبير أو تغيير ملامح الوجه، وإنما تحسين صحة البشرة وإعطاؤها مظهرًا أكثر شبابًا وإشراقًا.</p>
+    <p style="font-weight:300;color:#555">تختلف النتائج من شخص لآخر وفقًا للحالة الفردية وطبيعة البشرة. تُجرى الجلسة تحت إشراف طبيب مختص بعد تقييم الحالة.</p>
+    <p class="num" style="color:var(--purple);font-weight:600">0583120083 · 0112401164</p>
+  </div>
+
+  <div class="rule"></div>
+
+  <div class="label">الأوزان المتاحة</div>
+  <div class="row"><span style="font-family:var(--font-display);font-size:var(--step-2);font-weight:300">زين خفيف 300</span><span style="font-family:var(--font-display);font-size:var(--step-2);font-weight:400">زين عادي 400</span><span style="font-family:var(--font-display);font-size:var(--step-2);font-weight:700">زين عريض 700</span><span style="font-family:var(--font-display);font-size:var(--step-2);font-weight:900">زين أسود 900</span></div>
+  <div class="row"><span style="font-size:var(--step-1);font-weight:300">بلكس 300</span><span style="font-size:var(--step-1);font-weight:400">بلكس 400</span><span style="font-size:var(--step-1);font-weight:600">بلكس 600</span><span style="font-size:var(--step-1);font-weight:700">بلكس 700</span></div>
+  <div class="row" style="font-family:var(--font-latin)"><span style="font-size:var(--step-1);font-weight:200">Source 200</span><span style="font-size:var(--step-1);font-weight:400">Source 400</span><span style="font-size:var(--step-1);font-weight:600">Source 600</span><span style="font-size:var(--step-1);font-weight:900">Source 900</span></div>
+
+</div>
+</body>
+</html>
