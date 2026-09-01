@@ -1325,7 +1325,7 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
   box-shadow:0 20px 44px -22px rgba(59,26,85,.55);display:block}
 .dpg__b{text-align:center;width:100%}
 .dpg__k{color:#7A611F;letter-spacing:.18em;font-family:var(--font-body);
-  font-size:.7rem;font-weight:600;display:block;margin-block-end:8px}
+  font-size:clamp(.76rem,2.6vw,.84rem);font-weight:600;display:block;margin-block-end:8px}
 .dpg__b h1{font-size:clamp(1.5rem,6vw,2.1rem);color:var(--purple)}
 .dpg__b h1::before{content:"|";color:var(--gold);margin-inline-end:10px;font-weight:300}
 .dpg__spec{color:#6b5a3a;font-size:.92rem;margin-block-start:6px}
@@ -1333,7 +1333,7 @@ html[data-theme="dark"] .bkm__x{background:rgba(255,255,255,.1);color:var(--ink)
   background:rgba(255,255,255,.75);border:1px solid rgba(102,45,145,.58);
   border-start-start-radius:22px;border-end-end-radius:22px}
 .dpg__bio ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
-.dpg__bio h2{font-family:var(--font-body);font-size:.72rem;font-weight:600;letter-spacing:.16em;
+.dpg__bio h2{font-family:var(--font-body);font-size:clamp(.95rem,3.4vw,1.05rem);font-weight:600;letter-spacing:.1em;
   color:var(--purple);margin:0 0 12px}
 /* النقطة الذهبية بالتموضع المطلق لا بـflex: في حاوية flex يصير كل <span>
    داخل السطر عنصرًا مستقلًا فينكسر تدفّق النص إلى أعمدة. المظهر نفسه تمامًا
@@ -1398,7 +1398,7 @@ html:not(.js) .shead h2>span.mask,html:not(.js) .shead h1>span.mask{transform:no
   background:#F4F0F9;padding:14px;
   border-start-start-radius:22px;border-end-end-radius:22px}
 .dpg--dev .dpg__b h1::before{content:none}
-.dpg__en{display:block;font-family:var(--font-latin);font-size:.68rem;letter-spacing:.22em;
+.dpg__en{display:block;font-family:var(--font-latin);font-size:clamp(.76rem,2.6vw,.84rem);letter-spacing:.16em;
   color:#7A611F;margin-block-start:6px}
 
 /* شرائح الاستخدامات — كتل حقيقية بخلفية وحواف ومسافة داخلية، لا نص سائب */
@@ -1411,7 +1411,7 @@ html:not(.js) .shead h2>span.mask,html:not(.js) .shead h1>span.mask{transform:no
    المتمركز يكسر خط بداية القراءة في كل سطر ويُتعب العين */
 .dvg__par{margin-block-start:14px;color:#5a5a63;font-size:.93rem;line-height:2;
   text-align:start;max-width:62ch;margin-inline:auto}
-.dvg__gh{font-family:var(--font-body);font-size:.74rem;font-weight:600;letter-spacing:.16em;
+.dvg__gh{font-family:var(--font-body);font-size:clamp(.95rem,3.4vw,1.05rem);font-weight:600;letter-spacing:.1em;
   color:var(--purple);margin:26px 0 clamp(18px,3vw,26px);
   padding-block-end:10px;border-block-end:1px solid var(--grey);text-align:start}
 /* auto-fit لا auto-fill: الصورة الفردية في آخر صف تتمدّد بدل ترك خانة فارغة */
@@ -1495,17 +1495,18 @@ html[data-theme="dark"] .lead{color:#C9C0D8}
 .artpg__hero{margin:0 0 clamp(20px,3.4vw,32px)}
 .artpg__hero img{width:100%;height:auto;display:block;
   border-start-start-radius:26px;border-end-end-radius:26px}
-.artpg__sub{color:#5a5a63;font-size:1.02rem;line-height:1.9;
-  margin-block-start:10px;max-width:58ch}
+.artpg__sub{color:#4A4A52;font-size:clamp(1rem,3.6vw,1.22rem);line-height:1.9;
+  margin-block-start:12px;max-width:58ch}
 /* المتن */
 .artpg__body{margin-block-start:clamp(20px,3.4vw,30px)}
-.artpg__body h2{font-size:clamp(1.12rem,3.4vw,1.32rem);color:var(--purple);
-  line-height:1.5;margin:clamp(26px,4.4vw,40px) 0 12px;
+.artpg__body h2{font-size:clamp(1.15rem,4.4vw,1.45rem);color:var(--purple);
+  line-height:1.45;margin:clamp(26px,4vw,40px) 0 10px;
   padding-block-end:9px;border-block-end:1px solid rgba(102,45,145,.22)}
-.artpg__body p{color:#4a4a52;font-size:.96rem;line-height:2.05;margin:0 0 14px}
+.artpg__body p{color:#4a4a52;font-size:clamp(.97rem,3.5vw,1.06rem);line-height:2.05;
+  margin:0 0 14px;max-width:62ch}
 .artpg__body ul{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:9px}
 .artpg__body li{position:relative;padding-inline-start:17px;
-  color:#4a4a52;font-size:.94rem;line-height:1.95}
+  color:#4a4a52;font-size:clamp(.97rem,3.5vw,1.06rem);line-height:2.05;max-width:62ch}
 .artpg__body li::before{content:"";position:absolute;inset-inline-start:0;inset-block-start:11px;
   width:6px;height:6px;background:var(--gold);
   border-start-start-radius:5px;border-end-end-radius:5px}
@@ -1524,3 +1525,21 @@ html[data-theme="dark"] .artpg__body h2{color:#D9BFF2;border-block-end-color:rgb
 html[data-theme="dark"] .artpg__body strong{color:#E4D1F6}
 html[data-theme="dark"] .artpg__note{background:rgba(255,255,255,.05);
   border-color:rgba(217,191,242,.46);color:#C9C0D8}
+
+/* أحجام صفحة المقال — الأولوية للجوال.
+   مقصورة على .artpg فلا تمسّ رؤوس السكشنات في بقية الموقع. */
+/* الكيكر: تتبّع .28em العام كان يضاعف بصريًا المسافة بين الكلمتين
+   (النص في الـmd بمسافة واحدة سليمة — التتبّع هو السبب) */
+.artpg .shead__k{font-size:clamp(.74rem,2.6vw,.84rem);letter-spacing:.08em}
+/* العنوان الرئيسي: حدّه الأعلى العام 3.5rem يكسر التدرّج مع بقية الصفحة */
+.artpg .shead h1{font-size:clamp(1.8rem,6vw,2.9rem)}
+
+/* ‏.shead--page p تخصيصها (0,1,1) أعلى من .artpg__sub (0,1,0) فكانت تغلبها
+   وتفرض 0.95rem على العنوان الفرعي — نرفع التخصيص لتعود قيمته المقصودة */
+.artpg .artpg__sub{font-size:clamp(1rem,3.6vw,1.22rem);line-height:1.9}
+/* هدف لمس اللوجو: .hdr.solid .hdr__logo يصغّره إلى 38px (قاعدة معتمدة،
+   وتنطبق دائمًا في الصفحات الداخلية لأن هيدرها solid من البداية).
+   نوسّع مساحة اللمس دون تغيير مقاس اللوجو المرسوم. */
+.hdr__brand{min-block-size:44px}
+.hdr__brand .hdr__logo{min-inline-size:44px;object-position:center}
+.hdr__logo{padding-block:3px;box-sizing:content-box}
