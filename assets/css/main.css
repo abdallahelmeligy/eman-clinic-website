@@ -142,7 +142,7 @@ section{position:relative}
 .sec--white{background:var(--white)}
 .sec--dark{background:var(--purple-deep);color:#fff}
 .shead{text-align:center;margin-block-end:clamp(26px,5vw,50px)}
-.shead__k{font-family:var(--font-latin);font-size:.64rem;letter-spacing:.28em;color:var(--gold);
+.shead__k{font-family:var(--font-latin);font-size:clamp(.72rem,2.4vw,.78rem);letter-spacing:.28em;color:var(--gold);
   display:block;margin-block-end:10px}
 .shead h2,.shead h1{font-size:clamp(1.65rem,6.2vw,2.85rem)}
 .shead__line{width:56px;height:2px;background:var(--gold);margin:16px auto 0;transform:scaleX(0);
@@ -640,7 +640,7 @@ footer .wrap{position:relative;z-index:2}
 #railDev .card{width:clamp(150px,44vw,182px)}
 #railDoc .card__b,#railDev .card__b{padding:11px 12px 13px}
 #railDoc .card__b b,#railDev .card__b b{font-size:.9rem}
-#railDoc .card__b span,#railDev .card__b span{font-size:.72rem;line-height:1.6}
+#railDoc .card__b span,#railDev .card__b span{font-size:clamp(.76rem,2.5vw,.8rem);line-height:1.65}
 #railDev .card::before{font-size:clamp(.85rem,2.6vw,1.05rem)}
 .card.is-open{position:relative;cursor:pointer;transition:transform .45s var(--out),box-shadow .45s var(--out)}
 .card.is-open:hover{transform:translateY(-6px);box-shadow:0 26px 46px -28px rgba(59,26,85,.55)}
@@ -904,7 +904,7 @@ body{background:
 #railDoc .card{width:clamp(160px,46vw,196px);border:1px solid rgba(102,45,145,.12);
   background:#fff;overflow:hidden}
 #railDoc .card__b b{display:block;font-size:.92rem;color:var(--ink)}
-#railDoc .card__b span{display:block;font-size:.72rem;color:#7a7a85;margin-block-start:5px;line-height:1.6}
+#railDoc .card__b span{display:block;font-size:clamp(.76rem,2.5vw,.8rem);color:#7a7a85;margin-block-start:5px;line-height:1.6}
 #railDoc .card__b::after{content:"الملف الشخصي";display:block;margin-block-start:10px;
   font-size:.72rem;font-weight:600;color:var(--purple)}
 #railDoc .card:hover .card__b b{color:var(--purple)}
@@ -924,7 +924,7 @@ body{background:
   object-position:bottom center;padding-block-start:10px}
 #railDoc .card__b{background:transparent;border:0;text-align:center;padding:4px 12px 18px}
 #railDoc .card__b b{color:#fff;font-size:.95rem}
-#railDoc .card__b span{color:var(--gold-soft);font-size:.72rem}
+#railDoc .card__b span{color:var(--gold-soft);font-size:clamp(.76rem,2.5vw,.8rem)}
 #railDoc .card__b::after{color:rgba(255,255,255,.7)}
 #railDoc .card:hover{background:linear-gradient(168deg,#FBF6EC 0%,#F3E9DA 60%,#EFE6F6 100%);
   transform:translateY(-8px);box-shadow:0 30px 54px -30px rgba(59,26,85,.55)}
