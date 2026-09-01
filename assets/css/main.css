@@ -1550,3 +1550,28 @@ html[data-theme="dark"] .artpg__note{background:rgba(255,255,255,.05);
   grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}
 .artgrid .art{width:auto;scroll-snap-align:none}
 .artgrid .art__x{-webkit-line-clamp:3}
+
+/* ================================================================
+   القائمة الجانبية (#drawer) — قائمة الجوال، وأغلب الزائرات من الجوال
+   ================================================================ */
+/* ١ الحجم: كان clamp(1.5rem,7.5vw,2.1rem) — حجم عنوان رئيسي لا رابط قائمة */
+.drawer a{font-size:clamp(1.05rem,4vw,1.25rem)}
+/* ٢ التباعد: بحيث تظهر الروابط الستة وزرّا الأسفل دون تمرير على 390×844 */
+.drawer{justify-content:flex-start;gap:0;
+  padding-block-start:max(76px,calc(env(safe-area-inset-top) + 64px));
+  padding-block-end:max(20px,env(safe-area-inset-bottom));
+  overflow-y:auto}
+.drawer a{padding-block:11px}
+.drawer__foot{margin-block-start:20px}
+/* ٣ زر الإغلاق كان inset-inline-start أي جهة البداية نفسها التي تُحاذيها
+   الروابط في RTL فيتراكبان — نُزيحه إلى جهة النهاية */
+.drawer__x{inset-inline-start:auto;inset-inline-end:18px}
+/* ٤ ملء عرض الشاشة على الجوال */
+@media(max-width:480px){
+  .drawer{width:100%;inset-inline:0}
+}
+/* الأزرار السفلية تملأ العرض على الشاشات الضيقة بدل أن تتراصّ نصفين */
+@media(max-width:420px){
+  .drawer__foot{flex-direction:column}
+  .drawer__foot .btn{width:100%}
+}
