@@ -1543,3 +1543,10 @@ html[data-theme="dark"] .artpg__note{background:rgba(255,255,255,.05);
 .hdr__brand{min-block-size:44px}
 .hdr__brand .hdr__logo{min-inline-size:44px;object-position:center}
 .hdr__logo{padding-block:3px;box-sizing:content-box}
+
+/* شبكة بطاقات الإجراءات في services.html — نفس البطاقة المعتمدة (.art)
+   بتخطيط شبكة بدل الكاروسيل، لأن غرض الصفحة التصفّح */
+.artgrid{display:grid;gap:clamp(14px,2.6vw,22px);
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}
+.artgrid .art{width:auto;scroll-snap-align:none}
+.artgrid .art__x{-webkit-line-clamp:3}

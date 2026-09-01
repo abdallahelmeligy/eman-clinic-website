@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# ملفات عمل لا قيمة لها في نتائج البحث
+Disallow: /content/
+Disallow: /client-originals/
+Disallow: /licenses/
+Disallow: /tools/
+Disallow: /assets/partials/
+Disallow: /font-specimen.html
+
+Sitemap: https://emanclinic.com/sitemap.xml

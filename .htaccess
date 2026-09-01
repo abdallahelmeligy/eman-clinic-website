@@ -1,0 +1,101 @@
+# ==========================================================
+#  عيادات د. إيمان العبرة — إعدادات Apache (cPanel)
+#  ⚠️ هذا الملف لا يعمل على GitHub Pages (Apache فقط).
+#     على GitHub Pages تكفي 404.html وتُقدَّم تلقائيًا.
+# ==========================================================
+
+# ---------- صفحة الخطأ ----------
+ErrorDocument 404 /404.html
+
+# ---------- الترميز واللغة ----------
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .css .js .json .xml .svg
+
+# ---------- ضغط النصوص ----------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+  AddOutputFilterByType DEFLATE application/json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  # الصور والفيديو والخطوط مضغوطة أصلًا — إعادة ضغطها تُهدر المعالج بلا فائدة
+</IfModule>
+
+# ---------- الكاش ----------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # الأصول ثابتة الاسم: سنة كاملة
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType image/x-icon              "access plus 1 year"
+  ExpiresByType video/mp4                 "access plus 1 year"
+  ExpiresByType video/webm                "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+  # CSS وJS بلا بصمة في الاسم: أسبوع، حتى يصل أي تحديث للزائرات سريعًا
+  ExpiresByType text/css                  "access plus 1 week"
+  ExpiresByType application/javascript    "access plus 1 week"
+  # HTML لا يُخزَّن: المحتوى الطبي والأسعار قد تتغيّر
+  ExpiresByType text/html                 "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|jpe?g|png|svg|ico|mp4|webm|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  # الخطوط تُطلب بـcrossorigin من fonts.css
+  <FilesMatch "\.woff2$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+  Header set X-Content-Type-Options "nosniff"
+  Header always append X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ---------- أنواع MIME ----------
+<IfModule mod_mime.c>
+  AddType image/webp   .webp
+  AddType font/woff2   .woff2
+  AddType video/webm   .webm
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# ---------- HTTPS و www ----------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # فرض HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # توحيد النطاق بلا www (عدّليها إن اعتُمد www بدلًا من ذلك)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+  # ⚠️ SWAP: تحويلات من روابط الموقع القديم (ووردبريس) إلى الجديدة.
+  #    القائمة تحتاج تصدير روابط emanclinic.com الحالية من Search Console
+  #    قبل النشر، حفاظًا على ترتيب جوجل (HANDOFF القسم 7).
+  #    مثال على الصيغة:
+  #    Redirect 301 /old-doctors-page/ /doctors.html
+</IfModule>
+
+# ---------- منع تصفّح المجلدات ----------
+Options -Indexes
+
+# ---------- حماية ملفات العمل ----------
+<FilesMatch "\.(md|json|log)$">
+  Require all denied
+</FilesMatch>
+# استثناء الملفات التي يحتاجها الموقع فعلًا
+<Files "site.webmanifest">
+  Require all granted
+</Files>
+<Files "content-manifest.json">
+  Require all denied
+</Files>
